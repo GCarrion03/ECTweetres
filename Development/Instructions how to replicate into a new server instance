@@ -1,0 +1,98 @@
+--Installing couchdb
+sudo apt-get install couchdb -y
+--Get pip
+sudo apt-get install python-pip -y
+--install tweepy
+pip install tweepy
+--install couchdb python libs
+sudo pip install couchdb
+--Dependences tweet classifier
+sudo pip install twitter-text-python
+sudo pip install -U TextBlob
+sudo pip install tweet_classifier
+--Genderizer
+sudo pip install genderizer
+sudo pip install naiveBayesClassifier
+sudo pip install pyopenssl ndg-httpsclient pyasn1
+sudo pip install python-memcached
+sudo apt-get install git -y
+--Setup  object storage
+sudo apt-get install python-swiftclient
+--Credentials intranet softlayer
+export ST_AUTH=https://wdc.objectstorage.service.networklayer.com/auth/v1.0/
+export ST_USER="SLOS993025-2:SL993025"
+export ST_KEY="ba77a888a94945e3776afd6d3f118d93f675e770ccf60696dc048a5d51e11477"
+
+swift stat -v
+--Credentials internet softlayer
+
+export ST_AUTH=https://wdc.objectstorage.softlayer.net/auth/v1.0/
+export ST_USER="SLOS993025-2:SL993025"
+export ST_KEY="ba77a888a94945e3776afd6d3f118d93f675e770ccf60696dc048a5d51e11477"
+
+swift stat -v
+
+
+--upload all file in a folder
+swift upload ectweetres * 
+
+swift download ectweetres
+
+chmod 777 start_harvesting.sh
+chmod 777 check_process.sh
+
+/etc/couchdb
+change ip addr to 0.0.0.0
+sudo service couchdb status
+
+--Connect to couch db and Remember to set username and database passwords
+admin_user = 'user' #Futon admin username
+admin_pass = 'user'
+
+--Locations
+sudo apt-get install python-matplotlib
+
+sudo apt-get install python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose
+
+--install elasticsearch get the file ElasticSearch.sh
+chmod 777 ElasticSearch.sh
+chmod 777 Indexer.sh
+
+sudo ./ElasticSearch.sh 1.7
+--optional get maven and install river at the elasticsearch folder /usr/share/elasticSearch
+sudo bin/plugin install elasticsearch/elasticsearch-river-couchdb/2.6.0
+       --url file:target/releases/elasticsearch-river-couchdb-X.X.X-SNAPSHOT.zip
+
+--Install head
+sudo bin/plugin -install mobz/elasticsearch-head
+--Restart services
+sudo service couchdb restart
+sudo service elasticsearch restart
+
+--Add this to Configuration files elasticsearch.yml and logging.yml. /etc/elasticsearch
+
+http.cors.enabled : true
+ 
+http.cors.allow-origin : "*"
+http.cors.allow-methods : OPTIONS, HEAD, GET, POST, PUT, DELETE
+http.cors.allow-headers : X-Requested-With,X-Auth-Token,Content-Type, Content-Length
+
+--we run river config script
+sudo ./Indexer.sh
+
+--We need php to run server side scripts
+sudo apt-get install python-software-properties
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update
+sudo apt-get install -y php7.0
+
+sudo ./start_harvesting.sh 
+
+create the file ectweetres at /etc/init.d with the following command (cd /home/ectweetres/Harvester && exec sudo ./start_harvesting.sh 1 5)and do the same for the retweeter
+sudo update-rc.d ectweetres defaults 99
+sudo update-rc.d ectweetres enable
+sudo update-rc.d -f ectweetres remove
+
+
+sudo pip install elasticsearch
+

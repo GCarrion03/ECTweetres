@@ -1,0 +1,69 @@
+2179
+[{u'message': u'You cannot send messages to users who are not following you.', u'code': 150}]
+2015
+[{u'message': u'You cannot send messages to users who are not following you.', u'code': 150}]
+516
+Traceback (most recent call last):
+  File "retweetbot.py", line 87, in <module>
+    s.run()
+  File "/usr/lib/python2.7/sched.py", line 111, in run
+    delayfunc(time - now)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "retweetbot.py", line 87, in <module>
+    s.run()
+  File "/usr/lib/python2.7/sched.py", line 111, in run
+    delayfunc(time - now)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "retweetbot.py", line 87, in <module>
+    s.run()
+  File "/usr/lib/python2.7/sched.py", line 111, in run
+    delayfunc(time - now)
+KeyboardInterrupt
+420
+[{u'message': u"You can't follow yourself.", u'code': 158}]
+1428
+1587
+1870
+1886
+2183
+212
+1432
+Traceback (most recent call last):
+  File "retweetbot.py", line 87, in <module>
+    s.run()
+  File "/usr/lib/python2.7/sched.py", line 117, in run
+    action(*argument)
+  File "retweetbot.py", line 67, in retweet_sched
+    followers = api.followers_ids()
+  File "/usr/local/lib/python2.7/dist-packages/tweepy/binder.py", line 243, in _call
+    return method.execute()
+  File "/usr/local/lib/python2.7/dist-packages/tweepy/binder.py", line 225, in execute
+    raise RateLimitError(error_msg, resp)
+tweepy.error.RateLimitError: [{u'message': u'Rate limit exceeded', u'code': 88}]
+[{u'message': u'You cannot send messages to users who are not following you.', u'code': 150}]
+97
+[{u'message': u"You can't follow yourself.", u'code': 158}]
+464
+[{u'message': u'You cannot send messages to users who are not following you.', u'code': 150}]
+2629
+2193
+1837
+[{u'message': u'You cannot send messages to users who are not following you.', u'code': 150}]
+2780
+2032
+1599
+2174
+Traceback (most recent call last):
+  File "retweetbot.py", line 87, in <module>
+    s.run()
+  File "/usr/lib/python2.7/sched.py", line 117, in run
+    action(*argument)
+  File "retweetbot.py", line 67, in retweet_sched
+    followers = api.followers_ids()
+  File "/usr/local/lib/python2.7/dist-packages/tweepy/binder.py", line 243, in _call
+    return method.execute()
+  File "/usr/local/lib/python2.7/dist-packages/tweepy/binder.py", line 225, in execute
+    raise RateLimitError(error_msg, resp)
+tweepy.error.RateLimitError: [{u'message': u'Rate limit exceeded', u'code': 88}]

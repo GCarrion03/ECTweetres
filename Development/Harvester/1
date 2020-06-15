@@ -1,0 +1,11 @@
+nohup: appending output to ‘nohup.out’
+Traceback (most recent call last):
+  File "harvester_classifier.py", line 337, in <module>
+    twitterStream.filter(follow=settings.follows,track=settings.tracks)
+  File "/usr/local/lib/python2.7/dist-packages/tweepy/streaming.py", line 430, in filter
+    self._start(async)
+  File "/usr/local/lib/python2.7/dist-packages/tweepy/streaming.py", line 346, in _start
+    self._run()
+  File "/usr/local/lib/python2.7/dist-packages/tweepy/streaming.py", line 286, in _run
+    raise exception
+requests.packages.urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(0 bytes read, 2000 more expected)', IncompleteRead(0 bytes read, 2000 more expected))
